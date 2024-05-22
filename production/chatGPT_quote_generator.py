@@ -13,7 +13,7 @@ class chatGPT:
         # CHANGEME: For this program to work you need a paid API:subscription to chatgpt.
         # Important: API key! Not chatGPT + subscription. Replace placeholder below with private key.
         # This is very efficient. Currently creating one quote costs: less than 1 cent for 35 quotes.
-        self.chatGPT_env_acces_key = "addKEyHERE"
+        self.chatGPT_env_acces_key = ;
         
 
     def createQuoteFirstTime(self):
