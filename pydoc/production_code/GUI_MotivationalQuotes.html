@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module GUI_MotivationalQuotes</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">GUI_MotivationalQuotes</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cmaxih%5Cdesktop%5Ccapstone%5Cmaximilian-hopfer%5Cproduction%5Cgui_motivationalquotes.py">c:\users\maxih\desktop\capstone\maximilian-hopfer\production\gui_motivationalquotes.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="tkinter.font.html">tkinter.font</a><br>
+</td><td class="multicolumn"><a href="tkinter.messagebox.html">tkinter.messagebox</a><br>
+</td><td class="multicolumn"><a href="re.html">re</a><br>
+</td><td class="multicolumn"><a href="tkinter.html">tkinter</a><br>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="GUI_MotivationalQuotes.html#DailyMotivationAppGUI">DailyMotivationAppGUI</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="DailyMotivationAppGUI">class <strong>DailyMotivationAppGUI</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#DailyMotivationAppGUI">DailyMotivationAppGUI</a>(root)<br>
+&nbsp;<br>
+Tkinter&nbsp;GUI&nbsp;that&nbsp;enables&nbsp;user&nbsp;to&nbsp;sign&nbsp;up,&nbsp;login,&nbsp;delete&nbsp;their&nbsp;accounts,&nbsp;add&nbsp;new&nbsp;set&nbsp;of&nbsp;keywords&nbsp;and&nbsp;logout.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="DailyMotivationAppGUI-__init__"><strong>__init__</strong></a>(self, root)</dt><dd><span class="code">Creates&nbsp;objects&nbsp;that&nbsp;handle&nbsp;functionality.</span></dd></dl>
+
+<dl><dt><a name="DailyMotivationAppGUI-create_all_fields"><strong>create_all_fields</strong></a>(self)</dt><dd><span class="code">Creates&nbsp;window&nbsp;once&nbsp;user&nbsp;is&nbsp;logged&nbsp;in.</span></dd></dl>
+
+<dl><dt><a name="DailyMotivationAppGUI-create_login_label"><strong>create_login_label</strong></a>(self)</dt><dd><span class="code">Creates&nbsp;user&nbsp;login&nbsp;window.</span></dd></dl>
+
+<dl><dt><a name="DailyMotivationAppGUI-create_user_inDB"><strong>create_user_inDB</strong></a>(self, username_entry)</dt><dd><span class="code">Stores&nbsp;a&nbsp;users&nbsp;information&nbsp;in&nbsp;the&nbsp;database.&nbsp;Creates&nbsp;the&nbsp;first&nbsp;quote&nbsp;which&nbsp;will&nbsp;be&nbsp;send&nbsp;to&nbsp;user&nbsp;as&nbsp;well.</span></dd></dl>
+
+<dl><dt><a name="DailyMotivationAppGUI-log_in_user"><strong>log_in_user</strong></a>(self)</dt><dd><span class="code">Get&nbsp;user&nbsp;email&nbsp;address.&nbsp;<br>
+Also&nbsp;validates&nbsp;email&nbsp;address&nbsp;and&nbsp;does&nbsp;not&nbsp;allow&nbsp;invalid&nbsp;email&nbsp;addresses&nbsp;to&nbsp;continue&nbsp;in&nbsp;this&nbsp;application.<br>
+Further&nbsp;loads&nbsp;user&nbsp;information&nbsp;if&nbsp;is&nbsp;already&nbsp;user,&nbsp;otherwise,&nbsp;stores&nbsp;user&nbsp;in&nbsp;database.</span></dd></dl>
+
+<dl><dt><a name="DailyMotivationAppGUI-logout_and_restart_window"><strong>logout_and_restart_window</strong></a>(self)</dt><dd><span class="code">Resets&nbsp;window&nbsp;to&nbsp;start.</span></dd></dl>
+
+<dl><dt><a name="DailyMotivationAppGUI-set_custom_time"><strong>set_custom_time</strong></a>(self, preffered_email_time)</dt><dd><span class="code">Updates&nbsp;custom&nbsp;time&nbsp;from&nbsp;user&nbsp;in&nbsp;database.</span></dd></dl>
+
+<dl><dt><a name="DailyMotivationAppGUI-unsubscribe"><strong>unsubscribe</strong></a>(self)</dt><dd><span class="code">Deletes&nbsp;user&nbsp;information&nbsp;from&nbsp;database.</span></dd></dl>
+
+<dl><dt><a name="DailyMotivationAppGUI-update_keywords"><strong>update_keywords</strong></a>(self, user_email, new_keywords)</dt><dd><span class="code">Updates&nbsp;preferred&nbsp;keywords&nbsp;for&nbsp;user.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-main"><strong>main</strong></a>()</dt></dl>
+</td></tr></table>
+</body></html>

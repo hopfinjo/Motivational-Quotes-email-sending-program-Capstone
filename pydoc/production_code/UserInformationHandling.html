@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module UserInformationHandling</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">UserInformationHandling</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cmaxih%5Cdesktop%5Ccapstone%5Cmaximilian-hopfer%5Cproduction%5Cuserinformationhandling.py">c:\users\maxih\desktop\capstone\maximilian-hopfer\production\userinformationhandling.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="re.html">re</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="UserInformationHandling.html#UserInformation">UserInformation</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="UserInformation">class <strong>UserInformation</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">Handles&nbsp;all&nbsp;information-storage&nbsp;and&nbsp;interaction&nbsp;with&nbsp;the&nbsp;user.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="UserInformation-__init__"><strong>__init__</strong></a>(self)</dt><dd><span class="code">Generates&nbsp;empty&nbsp;fields&nbsp;of&nbsp;RegisterLoginUser&nbsp;<a href="builtins.html#object">object</a></span></dd></dl>
+
+<dl><dt><a name="UserInformation-check_if_isexisting_user"><strong>check_if_isexisting_user</strong></a>(self, database_user_information_table)</dt><dd><span class="code">Checks&nbsp;if&nbsp;user&nbsp;is&nbsp;already&nbsp;in&nbsp;Database.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;user_email&nbsp;(String):&nbsp;User&nbsp;email&nbsp;address(cannot&nbsp;be&nbsp;empty)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;user_information_collection&nbsp;(MongoDB&nbsp;collection):&nbsp;table&nbsp;that&nbsp;holds&nbsp;user&nbsp;information<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Boolean:&nbsp;True&nbsp;if&nbsp;existing&nbsp;user&nbsp;and&nbsp;False&nbsp;if&nbsp;not</span></dd></dl>
+
+<dl><dt><a name="UserInformation-get_keywords_from_user"><strong>get_keywords_from_user</strong></a>(self)</dt><dd><span class="code">Gets&nbsp;user&nbsp;input.&nbsp;User&nbsp;input&nbsp;must&nbsp;be&nbsp;seperated&nbsp;by&nbsp;space&nbsp;and&nbsp;limited&nbsp;to&nbsp;5&nbsp;words.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;list&nbsp;of&nbsp;keywords</span></dd></dl>
+
+<dl><dt><a name="UserInformation-get_preferred_sending_time"><strong>get_preferred_sending_time</strong></a>(self)</dt><dd><span class="code">Get&nbsp;time&nbsp;input&nbsp;from&nbsp;user.<br>
+Default&nbsp;return&nbsp;is&nbsp;"17:00"&nbsp;(5PM).<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;STRING:&nbsp;Returns&nbsp;time&nbsp;-&nbsp;String</span></dd></dl>
+
+<dl><dt><a name="UserInformation-get_registration_information_from_user"><strong>get_registration_information_from_user</strong></a>(self)</dt><dd><span class="code">Prompt&nbsp;the&nbsp;user&nbsp;for&nbsp;registration&nbsp;information.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Tuple:&nbsp;user_first_name,&nbsp;user_password</span></dd></dl>
+
+<dl><dt><a name="UserInformation-get_user_email"><strong>get_user_email</strong></a>(self)</dt><dd><span class="code">Prompt&nbsp;user&nbsp;for&nbsp;email&nbsp;address.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;String:&nbsp;email&nbsp;address</span></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="UserInformation-add_current_quote_to_alreadyUsed"><strong>add_current_quote_to_alreadyUsed</strong></a>(oldcurrent, already_used_quotes)</dt><dd><span class="code">Updates&nbsp;the&nbsp;current_quote&nbsp;of&nbsp;user.&nbsp;<br>
+Stores&nbsp;old&nbsp;current_quote&nbsp;in&nbsp;already_used_quotes&nbsp;variable&nbsp;of&nbsp;self&nbsp;<a href="builtins.html#object">object</a>.&nbsp;<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;newquote&nbsp;(String):&nbsp;String&nbsp;holding&nbsp;new&nbsp;quote&nbsp;generated&nbsp;by&nbsp;chatgpt</span></dd></dl>
+
+<dl><dt><a name="UserInformation-check_email"><strong>check_email</strong></a>(email)</dt><dd><span class="code">Returns&nbsp;True&nbsp;for&nbsp;"valid"&nbsp;email&nbsp;address&nbsp;and&nbsp;False&nbsp;for&nbsp;invalid&nbsp;email.<br>
+Does&nbsp;validation&nbsp;checking&nbsp;using&nbsp;following&nbsp;regular&nbsp;expression:<br>
+'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}'<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;email&nbsp;(String):&nbsp;email&nbsp;address&nbsp;inputed&nbsp;by&nbsp;user<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;boolean:&nbsp;True&nbsp;or&nbsp;False</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

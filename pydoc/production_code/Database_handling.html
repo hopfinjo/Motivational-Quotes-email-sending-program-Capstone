@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module Database_handling</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">Database_handling</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cmaxih%5Cdesktop%5Ccapstone%5Cmaximilian-hopfer%5Cproduction%5Cdatabase_handling.py">c:\users\maxih\desktop\capstone\maximilian-hopfer\production\database_handling.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="pymongo.html">pymongo</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="Database_handling.html#Database_handling">Database_handling</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Database_handling">class <strong>Database_handling</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">Handles&nbsp;all&nbsp;commnunication&nbsp;with&nbsp;locally&nbsp;running&nbsp;MongoDB&nbsp;database.&nbsp;<br>
+Default&nbsp;MongoDB&nbsp;port&nbsp;is&nbsp;used&nbsp;and&nbsp;can&nbsp;be&nbsp;accessed&nbsp;by:&nbsp;localhost:27017<br>
+Functions&nbsp;are&nbsp;create&nbsp;DB,&nbsp;insert&nbsp;users,&nbsp;update&nbsp;users.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="Database_handling-__init__"><strong>__init__</strong></a>(self)</dt><dd><span class="code">Initializes&nbsp;<a href="#Database_handling">Database_handling</a>&nbsp;<a href="builtins.html#object">object</a>.<br>
+This&nbsp;does&nbsp;not&nbsp;create&nbsp;a&nbsp;connection&nbsp;to&nbsp;the&nbsp;database.&nbsp;It&nbsp;solely&nbsp;intitialized&nbsp;the&nbsp;<a href="builtins.html#object">object</a><br>
+&nbsp;and&nbsp;sets&nbsp;the&nbsp;databse_collection_object&nbsp;to&nbsp;None.</span></dd></dl>
+
+<dl><dt><a name="Database_handling-connect_to_db_table_and_get_collection"><strong>connect_to_db_table_and_get_collection</strong></a>(self)</dt><dd><span class="code">Connects&nbsp;to&nbsp;MongoDB&nbsp;table.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;MongoDB_collection_(table):&nbsp;If&nbsp;the&nbsp;table&nbsp;does&nbsp;not&nbsp;exist,&nbsp;it&nbsp;will&nbsp;be&nbsp;created&nbsp;when&nbsp;inserting&nbsp;first&nbsp;element.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ConnectionFailure&nbsp;in&nbsp;case&nbsp;it&nbsp;cannot&nbsp;connect&nbsp;to&nbsp;db.</span></dd></dl>
+
+<dl><dt><a name="Database_handling-delete_user_from_database"><strong>delete_user_from_database</strong></a>(self, user_email)</dt><dd><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Delets&nbsp;a&nbsp;user&nbsp;from&nbsp;the&nbsp;database.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Args:<br>
+user_email&nbsp;(String):&nbsp;user&nbsp;email&nbsp;address.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_type_:&nbsp;_description_</span></dd></dl>
+
+<dl><dt><a name="Database_handling-get_user_keywords"><strong>get_user_keywords</strong></a>(self, user_email)</dt></dl>
+
+<dl><dt><a name="Database_handling-get_user_name"><strong>get_user_name</strong></a>(self, user_email)</dt><dd><span class="code">Gets&nbsp;a&nbsp;user&nbsp;name&nbsp;given&nbsp;a&nbsp;user&nbsp;email.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;user_email&nbsp;(String):&nbsp;user&nbsp;email<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;String:&nbsp;first&nbsp;name&nbsp;of&nbsp;user</span></dd></dl>
+
+<dl><dt><a name="Database_handling-get_users_prefered_emailTime"><strong>get_users_prefered_emailTime</strong></a>(self, user_email)</dt></dl>
+
+<dl><dt><a name="Database_handling-store_new_user_in_DB"><strong>store_new_user_in_DB</strong></a>(self, user_data)</dt><dd><span class="code">Stores&nbsp;user&nbsp;registration&nbsp;information&nbsp;into&nbsp;database.<br>
+If&nbsp;database&nbsp;table&nbsp;did&nbsp;not&nbsp;exist&nbsp;before,&nbsp;at&nbsp;inserting&nbsp;1&nbsp;element&nbsp;it&nbsp;will&nbsp;be&nbsp;created.</span></dd></dl>
+
+<dl><dt><a name="Database_handling-update_keywords"><strong>update_keywords</strong></a>(self, user_email, new_key_words)</dt><dd><span class="code">Updates&nbsp;a&nbsp;users&nbsp;keywords,&nbsp;which&nbsp;are&nbsp;used&nbsp;to&nbsp;generate&nbsp;personalized&nbsp;quotes.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;user_email&nbsp;(String):&nbsp;_description_<br>
+&nbsp;&nbsp;&nbsp;&nbsp;new_key_words&nbsp;(List[str]):&nbsp;_description_</span></dd></dl>
+
+<dl><dt><a name="Database_handling-update_user"><strong>update_user</strong></a>(self, user_email, new_quote, new_already_sent_quotes)</dt><dd><span class="code">Updates&nbsp;a&nbsp;users&nbsp;data.&nbsp;Used&nbsp;when&nbsp;new&nbsp;quote&nbsp;is&nbsp;generated.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;user_email&nbsp;(String):&nbsp;email&nbsp;addr&nbsp;=&nbsp;username&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;new_quote&nbsp;(String):&nbsp;Quote<br>
+&nbsp;&nbsp;&nbsp;&nbsp;new_already_sent_quotes&nbsp;(List[String]):&nbsp;15&nbsp;lastly&nbsp;used&nbsp;quotes</span></dd></dl>
+
+<dl><dt><a name="Database_handling-update_users_prefered_emailTime"><strong>update_users_prefered_emailTime</strong></a>(self, user_email, preffered_email_time)</dt><dd><span class="code">Updates&nbsp;time&nbsp;that&nbsp;user&nbsp;gets&nbsp;email&nbsp;each&nbsp;day.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;user_email&nbsp;(String):&nbsp;user&nbsp;email&nbsp;address.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;preffered_email_time&nbsp;(Time&nbsp;-&nbsp;String):&nbsp;preffered&nbsp;email&nbsp;time.</span></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="Database_handling-create_data_object_for_DB"><strong>create_data_object_for_DB</strong></a>(user_first_name, user_email, user_pw, user_current_quote, user_already_sent_quotes, user_preferred_emailTime, keywords)</dt><dd><span class="code">Creates&nbsp;data&nbsp;<a href="builtins.html#object">object</a>&nbsp;to&nbsp;be&nbsp;inserted&nbsp;into&nbsp;database.&nbsp;Does&nbsp;not&nbsp;insert&nbsp;the&nbsp;<a href="builtins.html#object">object</a>.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;user_first_name&nbsp;(String):&nbsp;name<br>
+&nbsp;&nbsp;&nbsp;&nbsp;user_email&nbsp;(String):&nbsp;email_address&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;user_pw&nbsp;(String):&nbsp;dummy&nbsp;password.&nbsp;always&nbsp;"1234"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;user_current_quote&nbsp;(String):&nbsp;Quote<br>
+&nbsp;&nbsp;&nbsp;&nbsp;user_already_sent_quotes&nbsp;(List[String]):&nbsp;15&nbsp;lastly&nbsp;used&nbsp;quotes<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;JSON&nbsp;Object:&nbsp;Ready&nbsp;to&nbsp;be&nbsp;inserted&nbsp;into&nbsp;DB</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

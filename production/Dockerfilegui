@@ -1,0 +1,21 @@
+# this code is from youtube tutorial:
+# https://youtu.be/W82jvmiaDtk?si=KRUZCfwNSns0RnW7
+
+# Use an official Python runtime as the base image
+FROM python:3.9-slim
+
+# Install required system packages
+RUN apt-get update && apt-get install -y libx11-6 libxext-dev libxrender-dev libxinerama-dev libxi-dev libxrandr-dev libxcursor-dev libxtst-dev tk-dev && rm -rf /var/lib/apt/lists/*
+
+# Install Python dependencies
+RUN pip install openai pymongo
+
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the current directory contents into the container at /app
+COPY . /app
+
+# Run gui_motivationalquotes.py when the container launches
+CMD ["python", "gui_motivationalquotes.py"]

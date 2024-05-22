@@ -1,0 +1,17 @@
+# Use the specified base image
+FROM python:3.9-slim
+
+WORKDIR /app
+
+# Copy the current directory contents into the container at /app
+COPY . /app
+
+# Install required system packages
+RUN pip install EmailMessage
+RUN pip install openai
+RUN pip install pymongo
+RUN pip install schedule
+
+
+# Run the python file when container launches
+CMD ["python", "driver_backend_sendemails.py"]

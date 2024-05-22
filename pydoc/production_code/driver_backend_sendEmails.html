@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module driver_backend_sendEmails</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">driver_backend_sendEmails</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cmaxih%5Cdesktop%5Ccapstone%5Cmaximilian-hopfer%5Cproduction%5Cdriver_backend_sendemails.py">c:\users\maxih\desktop\capstone\maximilian-hopfer\production\driver_backend_sendemails.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="schedule.html">schedule</a><br>
+</td><td class="multicolumn"><a href="time.html">time</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="driver_backend_sendEmails.html#MotivationalQuotesProgram">MotivationalQuotesProgram</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="MotivationalQuotesProgram">class <strong>MotivationalQuotesProgram</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">Driver&nbsp;to&nbsp;start&nbsp;the&nbsp;motivational&nbsp;quotes&nbsp;program&nbsp;email&nbsp;sending&nbsp;process.<br>
+This&nbsp;will&nbsp;check&nbsp;the&nbsp;database&nbsp;for&nbsp;new&nbsp;users&nbsp;and&nbsp;changed&nbsp;preferred&nbsp;sending&nbsp;times&nbsp;twice&nbsp;a&nbsp;day.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="MotivationalQuotesProgram-__init__"><strong>__init__</strong></a>(self)</dt><dd><span class="code">Initiates&nbsp;all&nbsp;needed&nbsp;modules.&nbsp;Class&nbsp;has&nbsp;some&nbsp;helper&nbsp;functions&nbsp;(mainly&nbsp;for&nbsp;scheduler),&nbsp;but&nbsp;most&nbsp;of&nbsp;the&nbsp;functionality&nbsp;is<br>
+implemented&nbsp;in&nbsp;main&nbsp;3&nbsp;modules:&nbsp;UserInformation,&nbsp;chatGPT&nbsp;and&nbsp;Database&nbsp;handling.</span></dd></dl>
+
+<dl><dt><a name="MotivationalQuotesProgram-load_scheduler"><strong>load_scheduler</strong></a>(self)</dt><dd><span class="code">Loads&nbsp;the&nbsp;scheduler&nbsp;with&nbsp;each&nbsp;user's&nbsp;email&nbsp;address&nbsp;and&nbsp;the&nbsp;task&nbsp;to&nbsp;generate&nbsp;a&nbsp;new&nbsp;motivational&nbsp;quote&nbsp;for&nbsp;them</span></dd></dl>
+
+<dl><dt><a name="MotivationalQuotesProgram-main"><strong>main</strong></a>(self)</dt><dd><span class="code">Backend&nbsp;code&nbsp;that&nbsp;sets&nbsp;scheduler&nbsp;and&nbsp;sends&nbsp;out&nbsp;emails.<br>
+Not&nbsp;intended&nbsp;for&nbsp;costumer&nbsp;use.&nbsp;Updates&nbsp;scheduler&nbsp;twice&nbsp;a&nbsp;day.<br>
+Stop&nbsp;code&nbsp;with&nbsp;ctrl&nbsp;+&nbsp;Z</span></dd></dl>
+
+<dl><dt><a name="MotivationalQuotesProgram-make_new_Quote_and_send"><strong>make_new_Quote_and_send</strong></a>(self, user_email)</dt><dd><span class="code">When&nbsp;scheduler&nbsp;triggers&nbsp;program&nbsp;to&nbsp;send&nbsp;new&nbsp;email,&nbsp;this&nbsp;will&nbsp;be&nbsp;executed&nbsp;to&nbsp;generate&nbsp;new&nbsp;email,&nbsp;update&nbsp;user&nbsp;info,&nbsp;and&nbsp;send&nbsp;new&nbsp;quote&nbsp;to&nbsp;user.<br>
+This&nbsp;gets&nbsp;all&nbsp;the&nbsp;user&nbsp;info&nbsp;from&nbsp;the&nbsp;db,&nbsp;and&nbsp;updates&nbsp;it&nbsp;after</span></dd></dl>
+
+<dl><dt><a name="MotivationalQuotesProgram-send_email_helper"><strong>send_email_helper</strong></a>(self, user_email)</dt><dd><span class="code">Is&nbsp;needed&nbsp;to&nbsp;store&nbsp;the&nbsp;email&nbsp;address&nbsp;from&nbsp;each&nbsp;user&nbsp;in&nbsp;memory.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;user_email&nbsp;(String):&nbsp;user_email</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
