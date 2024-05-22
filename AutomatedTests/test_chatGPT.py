@@ -26,7 +26,7 @@ class Test:
         assert result != ""
         
     def test_api_key_set(self):
-        expected_api_key = "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"
+        expected_api_key = "ADDKEYHERE"
 
         chat_gpt_instance = chatGPT()
 
